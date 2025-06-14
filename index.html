@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Redirigiendo a WhatsApp...</title>
+  <style>
+    body {
+      background-color: #e5f6ed;
+      color: #075e54;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+    .icon {
+      font-size: 80px;
+      margin-bottom: 20px;
+    }
+    .loader {
+      border: 6px solid #cfdeda;
+      border-top: 6px solid #25D366;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+      margin-top: 20px;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+  <script>
+    setTimeout(() => {
+      const numero = "591149373547";
+      const mensaje = encodeURIComponent("Quiero jugar con mi b0n0 del 20%.");
+      window.location.href = `https://wa.me/${numero}?text=${mensaje}`;
+    }, 2000);
+  </script>
+</head>
+<body>
+  <div class="icon">📱</div>
+  <h1>Redirigiendo a WhatsApp...</h1>
+  <p>Por favor, espera un momento.</p>
+  <div class="loader"></div>
+</body>
+</html>
