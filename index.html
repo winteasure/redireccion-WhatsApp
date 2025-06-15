@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redireccionando a WhatsApp...</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #25D366; /* Color verde de WhatsApp */
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: white;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    .logo {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 20px;
+    }
+
+    .message {
+      font-size: 1.5em;
+      margin-top: 10px;
+    }
+
+    .spinner {
+      margin-top: 20px;
+      border: 6px solid #ffffff60;
+      border-top: 6px solid white;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo" class="logo" />
+  <div class="message">Redireccionando a WhatsApp...</div>
+  <div class="spinner"></div>
+
+  <script>
+    setTimeout(() => {
+      const phoneNumber = "5491149373547";
+      const message = encodeURIComponent("Quiero jugar con mi b0n0 del 20%");
+      const url = `https://wa.me/${phoneNumber}?text=${message}`;
+      window.location.href = url;
+    }, 2000);
+  </script>
+</body>
+</html>
